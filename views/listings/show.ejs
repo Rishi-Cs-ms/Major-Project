@@ -11,7 +11,7 @@
 
     <div class="card s-card" style="width:40rem; max-height: fit-content;">
         <h2><%= listing.title %></h2>
-        <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="Listing Image" style="height:450px; width:40rem ;">
+        <img src="<%= listing.image.url %>" class="card-img-top img-fluid  show-img" alt="Listing Image" style="max-height: 450px; width: 100%; object-fit: cover;">
         <div class="card-body">
             <p class="card-text">
                 <i>Owned By <%= listing.owner.username %><br></i>
@@ -99,8 +99,11 @@
             </div>
         </div>
         <h3>Where you will</h3>
-        <div id="map"></div>
-    <script src="/js/map.js">   </script>
+        <div class="container-fluid">
+            <div  id="map" style="width: 100%;" class="rounded mb-3"></div>
+            <script src="/js/map.js">   </script>
+        </div>
+       
         
     </div>
     

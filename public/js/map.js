@@ -12,5 +12,3 @@ const marker = new mapboxgl.Marker({color:"red"})
     .setPopup(new mapboxgl.Popup()
     .setHTML(`<h4>${listing.location} </h4><p>Final Location Provided after Booking</p>`))
     .addTo(map);
-
-console.log(listing.geometry.coordinates);
