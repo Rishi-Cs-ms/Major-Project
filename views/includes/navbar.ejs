@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><div id="filterScroll"><i class="fa-regular fa-compass"></i></div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings"><div id="filterScroll"><div>Explore</div></div></a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control rounded-pill me-2" type="search" placeholder="Search Direction" >
+            <button class="btn btn-danger rounded-pill" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new"><div id="filterScroll" class="me-4"><div> Airbnb Your Home </div></div></a>
+          <% if (!user) { %>
+            <a class="nav-link" href="/signup"><b> <div id="filterScroll"><div>Sign up</div></div></b></a>
+            <a class="nav-link" href="/login"><b> <div id="filterScroll"><div>Log in</div></div></b></a>
+          <% } else { %>
+            <a class="nav-link" href="/logout"> <div id="filterScroll"><div>Log out</div></div></b></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

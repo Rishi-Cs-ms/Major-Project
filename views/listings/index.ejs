@@ -1,0 +1,54 @@
+<% layout("layouts/boilerplate.ejs") -%> 
+<div class="row">
+<div id="filterScroll" class="col d-flex flex-wrap justify-content-center align-items-center py-2">
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-fire"></i><br><small>Trending</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fas fa-water fa-lg"></i><br><small>Lakefront</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-campground"></i><br><small>Cabins</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-house"></i><br><small>Countryside</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-tent"></i><br><small>Camping</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-building"></i><br><small>Mansions</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-bed"></i><br><small>Rooms</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-key"></i><br><small>New</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-holly-berry"></i><br><small>Creative</small>
+        </div>
+        <div class="text-center ms-3 mt-2">
+            <i class="fa-solid fa-umbrella-beach"></i><br><small>Beach</small>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <% for (let listing of allListings) { %>
+        <div class="col d-flex align-items-center ">
+            <a href="/listings/<%= listing._id %>" class="text-decoration-none">
+                <div class="card listing-card" style="width: 21rem;">
+                    <img src="<%= listing.image.url %>" class="card-img-top" style="height: 16rem; width: 21rem;" alt="Listing Image">
+                    <div class="card-img-overlay">Rishi Majmudar</div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b><%= listing.title %></b><br>
+                            $<%= listing.price.toLocaleString("en-US") %>/week
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    <% } %>
+</div>

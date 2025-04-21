@@ -1,0 +1,107 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-fluid{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color:white ;
+}
+.fa-compass{
+    color:red;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #000000 !important;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    height:8rem; 
+    background-color: rgb(220, 218, 218);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.f-info-socials {
+    display: flex; /* Makes the icons align in a row */
+    gap: 15px; /* Adjust the space between icons */
+}
+
+.f-info-socials i {
+    font-size: 1.2rem; /* Adjust size if needed */
+    cursor: pointer;
+}
+.listing-card{
+    border:none;
+    margin-bottom: 1rem;
+}
+.card-img-top{
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.show-btn{
+    display:flex;
+    justify-content: space-between;
+}
+.s-card {
+    padding: 0 !important;  
+    margin: 0;              
+    border: none;           /* Optional: Remove border */
+    box-shadow: none;       /* Optional: Remove shadow */
+}
+
+.s-card .card-body {
+    padding: 0.5rem;        /* Adjust the padding inside the card-body */
+}
+
+.s-card img {
+    object-fit: cover;      /* Ensure the image fits well inside the container */
+    height: 300px;          /* Maintain a consistent image height */
+    width: 100%;            /* Ensure the image stretches across the card */
+}
+.col{
+    padding-left: 0.3rem !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Map */
+#map{
+    height:400px;
+    width:40rem;
+}
+
+#filterScroll > div {
+    min-width: 80px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#filterScroll > div:hover {
+    color: #FF385C;
+}
